@@ -3,6 +3,7 @@
 
 <img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/1db85522-d8ea-4365-9162-1df123194397" />  
 
+<img width="2551" height="1078" alt="image" src="https://github.com/user-attachments/assets/c676c6ee-5560-4630-b201-f2d5f123656d" />        
 ## 1. Descripción del proyecto
 
 Este proyecto permite desarrollar una aplicación de consola utilizando Java 21 e IntelliJ IDEA, encargada 
