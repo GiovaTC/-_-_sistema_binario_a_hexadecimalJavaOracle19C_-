@@ -1,0 +1,60 @@
+-- ==========================================
+-- PROYECTO BINARIO A HEXADECIMAL
+-- ORACLE DATABASE 19C
+-- ==========================================
+
+-- CREACION DE TABLA
+
+CREATE TABLE MENSAJES_HEXADECIMALES (
+    ID NUMBER GENERATED ALWAYS AS IDENTITY
+       PRIMARY KEY,
+    MENSAJE VARCHAR2(100),
+    BINARIO VARCHAR2(4000),
+    HEXADECIMAL VARCHAR2(4000),
+    FECHA_REGISTRO DATE DEFAULT SYSDATE
+);
+
+COMMIT;
+
+-- ==========================================
+-- PROCEDIMIENTO ALMACENADO
+-- ==========================================
+
+CREATE OR REPLACE PROCEDURE
+PR_GUARDAR_MENSAJE_HEX (
+    P_MENSAJE IN VARCHAR2,
+    P_BINARIO IN VARCHAR2,
+    P_HEXADECIMAL IN VARCHAR2
+)
+AS
+BEGIN
+
+    INSERT INTO MENSAJES_HEXADECIMALES (
+        MENSAJE,
+        BINARIO,
+        HEXADECIMAL,
+        FECHA_REGISTRO
+    )
+    VALUES (
+        P_MENSAJE,
+        P_BINARIO,
+        P_HEXADECIMAL,
+        SYSDATE
+    );
+
+END;
+/
+
+COMMIT;
+
+-- ==========================================
+-- CONSULTA DE REGISTROS
+-- ==========================================
+
+SELECT
+    ID,
+    MENSAJE,
+    BINARIO,
+    HEXADECIMAL,
+    FECHA_REGISTRO
+FROM MENSAJES_HEXADECIMALES ORDER BY ID;
