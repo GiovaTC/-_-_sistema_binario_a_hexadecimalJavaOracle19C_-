@@ -14,4 +14,4 @@ public class ConexionOracle {
     {
         return DriverManager.getConnection(URL, USUARIO, PASSWORD);
     }
-}   
+}
