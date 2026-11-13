@@ -77,5 +77,5 @@ public class MensajeDAO {
                         rs.getTimestamp("FECHA_REGISTRO"));
             }
         }
-    }   
+    }
 }
